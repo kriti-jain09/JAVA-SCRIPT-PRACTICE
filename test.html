@@ -1,43 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PRACTICE</title>
-</head>
-<body>
-    <h1>What can JavaScrit Do?</h1>
+  </head>
+  <body>
+    <h1 id="intro">What can JavaScrit Do?</h1>
     <!-- JS can change HTML content one of the method is by using getElementById() -->
     <p id="d1">JavaScript can change HTML content.</p>
-    <button type="button" onclick="document.getElementById('d1').innerHTML='Hello JavaScript'">click here</button>
-    <hr>
+    <button
+      type="button"
+      onclick="document.getElementById('d1').innerHTML='Hello JavaScript'"
+    >
+      click here
+    </button>
+    <hr />
 
     <!-- JS accepts both double and single quotes. -->
 
-    <p id="d2">JS can change HTML attribute values <br>JS changes the value of the src attribute of an image.</p>
-    <button onclick="document.getElementById('myImage').src='https:www.w3schools.com/js/pic_bulbon.gif'">Turn on the light</button> 
-    <img id="myImage" src="https://www.w3schools.com/js/pic_bulboff.gif" alt="off_bulb" style="width: 100px;">
-    <button onclick="document.getElementById('myImage').src='https:www.w3schools.com/js/pic_bulboff.gif'">Turn of the light</button>
-    <hr>
-
+    <p id="d2">
+      JS can change HTML attribute values <br />JS changes the value of the src
+      attribute of an image.
+    </p>
+    <button
+      onclick="document.getElementById('myImage').src='https:www.w3schools.com/js/pic_bulbon.gif'"
+    >
+      Turn on the light
+    </button>
+    <img
+      id="myImage"
+      src="https://www.w3schools.com/js/pic_bulboff.gif"
+      alt="off_bulb"
+      style="width: 100px"
+    />
+    <button
+      onclick="document.getElementById('myImage').src='https:www.w3schools.com/js/pic_bulboff.gif'"
+    >
+      Turn of the light
+    </button>
+    <hr />
 
     <p id="d3">JS can change CSS</p>
-    <button onclick="document.getElementById('d3').style.fontSize='35px'">Click Click</button>
-    <hr>
-
+    <button onclick="document.getElementById('d3').style.fontSize='35px'">
+      Click Click
+    </button>
+    <hr />
 
     <p id="d4">JS can hide HTML elements</p>
-    <button onclick="document.getElementById('d4').style.display='none'">Vanish</button>
+    <button onclick="document.getElementById('d4').style.display='none'">
+      Vanish
+    </button>
+    <hr />
+
+    <p id="d5" style="display: none">JS can show HTML elements</p>
+    <button onclick="document.getElementById('d5').style.display='block'">
+      SHOW
+    </button>
     <hr>
 
+    <h1 id="js">JS Where To</h1>
 
-    <p id="d5" style="display:none">JS can show HTML elements</p>
-    <button onclick="document.getElementById('d5').style.display='block'">SHOW</button>
+    <p id="d6"></p>
+    <script>
+      document.getElementById("d6").innerHTML = "My first JavaScript";
+    </script>
+    <!-- in HTML,JS code is inserted between these tags -->
+    <hr>
 
+    <h2>JS Functions and Events</h2>
+    <p>JS function is a block of  JS code that can be executed when "called" </p>
+    <hr>
+     <p>We can place any number of scripts in HTML doc. and these can be placed in body or head section of HTML page.</p>
+     <hr>
 
-    
+    <h3>EXTERNAL JS</h3>
+    <script src="test.js"></script><!--to use an external script put the name in the src attribute of script tag-->
+    <hr>
+    <h1 id="output">JS OUTPUT</h1>
+    <h2 id="dp">JS Display Possibilities</h2>
+    <p>JS can display data in 4 different ways
+      <ul>
+        <li>writing in HTML element, using innerHTML.</li>
+        <li>writing into the HTML output, using document.write().</li>
+         <li>writing into an alert box, using window.alert().</li>
+         <li>writing into the browser console, using console.log().</li>      
+      </ul>
+    </p>
+    <h3>Using innerHTML</h3>
+    <p>to access an HTML element JS can use document.getElementById(id)<br>the id attribute defines the element and innerHTML property defines the content </p>
+    <p id="d7"></p>
+    <script>document.getElementById('d7').innerHTML=10+5;</script>
 
+    <h3>Using document.write()</h3>
+    <script>document.write(2+3);</script>
+    <p>if document.write() is used after documentis loaded, it will delete all existing HTML <br>this method should only be used for testing </p>
+    <button onclick="document.write('demm!!')">try me</button>
 
-</body>
+    <h3>Using window.alert()</h3>
+    <p>we can use alert box to display data</p>
+    <script>window.alert('heh!!')</script>
+    <p>we can skip the window keyword <br>In JavaScript, the window object is the global scope object, that means that variables, properties, and methods by default belong to the window object.</p>
+    <script>alert('duniya mc')</script>
+    <h3>Using console.log()</h3>
+    <p>for debugging purposes this can be used in browser to display data</p>
+    <script>console.log('oof moment')</script>
+    <hr>
+
+    <h2 id="print">JS Print</h2>
+    <p>JS doesn't have any print methods. <br>we cannot access output devices using JS. <br>the only execution we can call the window.print() method in browser to print the page content.</p>
+    <button onclick="window.print()">click to print</button>
+    <hr>
+
+  </body>
 </html>
